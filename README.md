@@ -1,2 +1,3 @@
-# matplotlib_tutorial
-Jupyter notebook repository for Comp777 Matplotlib tutorial
+# Comp777
+
+Code repository for 2018 Comp777 course
