@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>D3js</title>
+    <link href="css/darcula.css" rel="stylesheet">
+    <link href="css/materialize.min.css" rel="stylesheet">
+    <script src="js/highlight.pack.js"></script>
+    <script> hljs.initHighlightingOnLoad();</script>
+    <script src="js/materialize.min.js"></script>
+    <script src="js/d3.min.js"></script>
+  </head>
+
+  <body>
+    <script type='text/javascript'>
+      d3.csv('data/countries_of_the_world.csv')
+        .then( (data) => console.log(data))
+
+    </script>
+
+    <div class="container">
+        <h1>Reading data</h1>
+    </div><!-- /.container -->
+
+    <pre><code class="javascript">
+      d3.csv('data/countries_of_the_world.csv', function(data,error){
+        if (error)
+          console.log(error);
+        console.log(data);
+      })
+    </code></pre>
+
+
+
+  </body>
+</html>
