@@ -1,0 +1,466 @@
+% arara: pdflatex
+% arara: bibtex
+% arara: pdflatex
+% arara: pdflatex
+\documentclass[a4paper,10pt]{article}
+
+\usepackage{fullpage}
+\usepackage{comment}
+
+% font packages
+\usepackage{palatino}
+\usepackage{mathpazo}
+%\usepackage{sansmathfonts}
+%\usepackage[scaled]{helvet}
+%\renewcommand*\familydefault{\sfdefault}
+
+% packages for tables and lists
+\usepackage{booktabs}
+\usepackage{enumitem}
+
+% mathematics packages
+\usepackage{amsmath,amssymb,amstext,amsthm}
+
+% package to include image
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+% packge for bibliography
+\usepackage{natbib}
+%\bibliographystyle{apalike}{}
+
+
+\begin{document}
+
+We can refer to the Sections \ref{s:intro} and \ref{s:duis} and also Subsection \ref{s:pretium}.
+If we add extra sections or subsections in between, then the reference will automatically
+update the next time we compile the source code.
+
+\section{Introduction}
+\label{s:intro}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam risus non augue hendrerit, a dapibus lectus
+scelerisque. Nunc mollis id elit sed semper. Vestibulum et lectus risus. Vivamus luctus ante diam, a dapibus nisl
+cursus eu. Sed at dignissim tortor, ac elementum eros. Cras sit amet tortor sed tortor ultrices tristique.
+Mauris molestie ut libero eu euismod. Pellentesque ac faucibus lorem. Praesent sem urna, tincidunt vel nisl nec,
+dignissim pulvinar lacus. Sed molestie ex sit amet sapien tincidunt lacinia. Integer varius laoreet erat, sit
+amet maximus ante placerat ac.
+
+Nunc efficitur tortor nec metus vestibulum posuere. Suspendisse nec pellentesque augue, ac iaculis odio.
+In aliquet leo lorem, ut tristique ante ultrices nec. Integer sed lacinia purus. Vestibulum quis faucibus risus.
+Ut faucibus vitae mi sit amet dapibus. In hac habitasse platea dictumst.
+
+\section{Duis quam orci}
+\label{s:duis}
+
+Duis quam orci, lobortis sollicitudin lacinia in, lobortis a enim. Maecenas interdum auctor pulvinar.
+Ut at mi id orci ultricies porta ultricies eu nulla. Sed tempor leo vel fringilla euismod. Donec gravida velit
+eget tortor pretium malesuada. Pellentesque ut laoreet orci. Quisque feugiat, sapien sed cursus malesuada,
+ante est tristique tellus, ut aliquam mi ligula vel nunc. Aliquam sagittis purus est, ut pretium justo cursus vitae.
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+
+Quisque sed mollis nisl. Vestibulum ex ligula, finibus non libero et, iaculis convallis nisi.
+Integer vel erat sed erat ultrices ultrices sit amet sed leo. Morbi massa ex, maximus id lectus vitae,
+hendrerit aliquam ante. Fusce feugiat eros sapien, sed convallis sapien egestas nec. Etiam aliquet at
+nisi vitae feugiat. Proin convallis tempus nunc ac dapibus. Nulla consequat eget odio id bibendum.
+
+\subsection{Pretium malesuada}
+\label{s:pretium}
+
+Duis quam orci, lobortis sollicitudin lacinia in, lobortis a enim. Maecenas interdum auctor pulvinar.
+Ut at mi id orci ultricies porta ultricies eu nulla. Sed tempor leo vel fringilla euismod. Donec gravida velit
+eget tortor pretium malesuada. Pellentesque ut laoreet orci. Quisque feugiat, sapien sed cursus malesuada,
+ante est tristique tellus, ut aliquam mi ligula vel nunc. Aliquam sagittis purus est, ut pretium justo cursus vitae.
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Maecenas quis leo a metus pharetra tincidunt. Etiam sed lectus vel mi semper vehicula a sed lorem.
+Maecenas elementum sit amet enim et scelerisque.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Donec viverra, erat finibus interdum sollicitudin, massa enim venenatis ex, ac commodo dolor ipsum at urna.
+Proin hendrerit sem ipsum, vel vestibulum risus fermentum id.
+
+\pagebreak
+
+
+\section*{List environments}
+
+\subsubsection*{Standard itemize:}
+
+\begin{itemize}
+  \item at dignissim tortor
+  \item ac elementum eros sit amet tortor sed tortor ultrices tristique
+  \item mauris molestie ut libero eu euismod
+  \item dignissim pulvinar lacus sed molestie ex sit amet sapien tincidunt
+\end{itemize}
+
+\subsubsection*{Modified bullet:}
+
+\begin{itemize}
+  \item[-] at dignissim tortor
+  \item[*] ac elementum eros sit amet tortor sed tortor ultrices tristique
+  \item[\checkmark] mauris molestie ut libero eu euismod
+  \item[$\times$] dignissim pulvinar lacus sed molestie ex sit amet sapien tincidunt
+\end{itemize}
+
+\subsubsection*{Standard enumerate:}
+
+\begin{enumerate}
+  \item mauris molestie ut libero eu euismod
+  \item ac elementum eros sit amet tortor sed tortor ultrices tristique
+  \item at dignissim tortor
+  \item dignissim pulvinar lacus sed molestie ex sit amet sapien tincidunt
+\end{enumerate}
+
+\subsubsection*{Roman numerals (using enumitem package):}
+
+\begin{enumerate}[label=(\roman*)]
+  \item mauris molestie ut libero eu euismod
+  \item ac elementum eros sit amet tortor sed tortor ultrices tristique
+  \item at dignissim tortor
+  \item dignissim pulvinar lacus sed molestie ex sit amet sapien tincidunt
+\end{enumerate}
+
+\subsubsection*{Alphabetical (using enumitem package):}
+
+\begin{enumerate}[label=\alph*)]
+  \item mauris molestie ut libero eu euismod
+  \item ac elementum eros sit amet tortor sed tortor ultrices tristique
+  \item at dignissim tortor
+  \item dignissim pulvinar lacus sed molestie ex sit amet sapien tincidunt
+\end{enumerate}
+
+\subsubsection*{Basic description:}
+
+\begin{description}
+  \item[mauris] molestie ut libero eu euismod
+  \item[ac] elementum eros sit amet tortor sed tortor ultrices tristique
+  \item[at] dignissim tortor
+  \item[dignissim] pulvinar lacus sed molestie ex sit amet sapien tincidunt
+\end{description}
+
+
+\pagebreak
+
+
+\section*{Math mode}
+\subsubsection*{Inline mathematics}
+
+\begin{quote}
+where $Q(p)$ is the number of isomorphism classes ${\mathcal E}_p$ of elliptic curves over ${\mathbb F}_p$
+such that for any curve $E \in {\mathcal E}_p$,
+$|E({\mathbb F}_p)|$ and  $|\overline{E}({\mathbb F}_p)|$
+are primes.
+\end{quote}
+
+\subsubsection*{Using equation environment}
+
+\begin{equation}
+  \label{math:a}
+  \binom{u}{v} = \binom{u_{\ell-1},\dots,u_0}{v_{\ell-1},\dots,v_0}
+\end{equation}
+
+\begin{equation}
+  \label{math:b}
+  \begin{aligned}
+    \left| \bigcup_{i=1}^m A_i \right| = \sum_{i=1}^{m} \left| A_i \right|
+      &- \sum_{1\le i < j \le m} \left| A_i \cap A_j\right|
+      + \sum_{1 \le i < j < k \le m} \left| A_i \cap A_j \cap A_k \right| \\
+      &- \cdots 		\\
+      &+ (-1)^{m-1}\left| A_1 \cap \cdots \cap A_m \right|
+  \end{aligned}
+\end{equation}
+
+
+\subsubsection*{Using displaymath environment}
+\noindent{}First equation:
+\[
+  \label{math:c}
+  \binom{u}{v} = \binom{u_{\ell-1},\dots,u_0}{v_{\ell-1},\dots,v_0}
+\]
+Second equation:
+\[
+  \label{math:d}
+  \begin{aligned}
+    \left| \bigcup_{i=1}^m A_i \right| = \sum_{i=1}^{m} \left| A_i \right|
+      &- \sum_{1\le i < j \le m} \left| A_i \cap A_j\right|
+      + \sum_{1 \le i < j < k \le m} \left| A_i \cap A_j \cap A_k \right| \\
+      &- \cdots 		\\
+      &+ (-1)^{m-1}\left| A_1 \cap \cdots \cap A_m \right|
+  \end{aligned}
+\]
+Third equation:
+\[
+  \label{math:e}
+  \begin{aligned}
+    x^2 - 2x + 1 &= (x-1)(x-1)\\
+                 &= (x-1)^2
+  \end{aligned}
+\]
+
+It is possible to refer to the math blocks, namely (\ref{math:a}) and (\ref{math:b}) above.
+It is pointless to reference the displaymath ones because the counters are not incremented
+(they are all numbered the same: (\ref{math:c}), (\ref{math:d}) and (\ref{math:e}) )
+and they are not displayed on the equation anyway.
+
+\subsubsection*{Most commonly used math symbols}:
+
+Square roots, superscript, and subscript
+\[
+    \sqrt[3]{b_i + b_{i+1}^2}
+\]
+
+Sums and product:
+\[
+  \sum_{i=1}^k \left(\frac{i+1}{2}\right)^2
+  \qquad\text{and}\qquad
+  \prod_{\substack{i=1,\\ \text{$i$ is even}}}^k \left\{\frac{2^i}{3}\right\}
+\]
+
+
+\pagebreak
+\renewcommand{\arraystretch}{1.4}
+\section*{Tabular environment}
+\ \\
+\ \\
+
+\begin{center}
+\begin{tabular}{l | r r c | r r c }
+\hline
+\hline
+  Name  & $x$ & $y$ & trend & $x$ & $y$ & trend \\
+\hline
+  Amanda  & 11.2 & 13.9 & increasing & 12.1 & 12.1 & none \\
+  Daniel  & 14.5 & 11.4 & decreasing & 19.4 & 13.6 & decreasing \\
+  Homer   &  0.0 &  0.0 & none       &  0.0 &  0.0 & none \\
+\hline
+\hline
+\end{tabular}
+\end{center}
+
+\ \\
+\ \\
+
+\begin{center}
+\begin{tabular}{l | r r c | r r c } \hline
+  \multicolumn{1}{c}{}& \multicolumn{3}{c}{2015} & \multicolumn{3}{c}{2016} \\
+  \multicolumn{1}{c}{Name}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{trend}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{trend} \\
+  \hline
+  Amanda  & 11.2 & 13.9 & increasing & 12.1 & 12.1 & none \\
+  Daniel  & 14.5 & 11.4 & decreasing & 19.4 & 13.6 & decreasing \\
+  Homer   &  0.0 &  0.0 & none       &  0.0 &  0.0 & none \\
+\hline
+\end{tabular}
+\end{center}
+
+
+\ \\
+\ \\
+
+\begin{center}
+\begin{tabular}{l | r r c | r r c } \toprule[0.2pt]
+  \multicolumn{1}{c}{}& \multicolumn{3}{c}{2015} & \multicolumn{3}{c}{2016} \\
+  \multicolumn{1}{c}{Name}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{trend}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{trend} \\
+  \midrule[2pt]
+  Amanda  & 11.2 & 13.9 & increasing & 12.1 & 12.1 & none \\
+  Daniel  & 14.5 & 11.4 & decreasing & 19.4 & 13.6 & decreasing \\
+  Homer   &  0.0 &  0.0 & none       &  0.0 &  0.0 & none \\
+\bottomrule[0.2pt]
+\end{tabular}
+\end{center}
+
+
+\ \\
+\ \\
+
+
+\begin{center}
+\begin{tabular}{l  r r c  r r c }
+  & \multicolumn{3}{c}{2015} & \multicolumn{3}{c}{2016} \\
+  \multicolumn{1}{c}{Name}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & trend
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & trend \\
+  \cmidrule[1.2pt](r){1-1} \cmidrule[1.2pt](lr){2-4} \cmidrule[1.2pt](l){5-7}
+  Amanda  & 11.2 & 13.9 & increasing & 12.1 & 12.1 & none \\
+  Daniel  & 14.5 & 11.4 & decreasing & 19.4 & 13.6 & decreasing \\
+  Homer   &  0.0 &  0.0 & none       &  0.0 &  0.0 & none \\
+\bottomrule[0.2pt]
+\end{tabular}
+\end{center}
+
+\ \\
+\ \\
+
+
+\begin{center}
+\begin{tabular}{l l}
+  $A = Z_1^2$			&	$Z_3 = A\cdot C$ \\
+  $B = b\cdot A^2$	&	$X_3 = C^2 + B$\\
+  $C = X_1^2$			&  $Y_3 = (Y_1^2 + a\cdot Z_3 + B)\cdot X_3 + Z_3\cdot B$.
+\end{tabular}
+\end{center}
+
+
+\pagebreak
+\section*{Figures and tables}
+
+\begin{figure}
+\label{figure:here}
+\begin{center}
+\begin{tabular}{l | r r c | r r c }
+\hline
+\hline
+  Name  & $x$ & $y$ & trend & $x$ & $y$ & trend \\
+\hline
+  Amanda  & 11.2 & 13.9 & increasing & 12.1 & 12.1 & none \\
+  Daniel  & 14.5 & 11.4 & decreasing & 19.4 & 13.6 & decreasing \\
+  Homer   &  0.0 &  0.0 & none       &  0.0 &  0.0 & none \\
+\hline
+\hline
+\end{tabular}
+\caption{Figure placed `here'}
+\end{center}
+\end{figure}
+
+\begin{figure}[b!]
+\label{figure:bottom}
+\begin{center}
+\begin{tabular}{l | r r c | r r c } \hline
+  \multicolumn{1}{c}{}& \multicolumn{3}{c}{2015} & \multicolumn{3}{c}{2016} \\
+  \multicolumn{1}{c}{Name}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{trend}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{trend} \\
+  \hline
+  Amanda  & 11.2 & 13.9 & increasing & 12.1 & 12.1 & none \\
+  Daniel  & 14.5 & 11.4 & decreasing & 19.4 & 13.6 & decreasing \\
+  Homer   &  0.0 &  0.0 & none       &  0.0 &  0.0 & none \\
+\hline
+\end{tabular}
+\caption{Figure placed at bottom}
+\end{center}
+\end{figure}
+
+
+\begin{table}[b!]
+\label{table:bottom}
+\begin{center}
+\begin{tabular}{l | r r c | r r c } \toprule[0.2pt]
+  \multicolumn{1}{c}{}& \multicolumn{3}{c}{2015} & \multicolumn{3}{c}{2016} \\
+  \multicolumn{1}{c}{Name}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{trend}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & \multicolumn{1}{c}{trend} \\
+  \midrule[2pt]
+  Amanda  & 11.2 & 13.9 & increasing & 12.1 & 12.1 & none \\
+  Daniel  & 14.5 & 11.4 & decreasing & 19.4 & 13.6 & decreasing \\
+  Homer   &  0.0 &  0.0 & none       &  0.0 &  0.0 & none \\
+\bottomrule[0.2pt]
+\end{tabular}
+\caption{Table placed at bottom}
+\end{center}
+\end{table}
+
+
+
+\begin{table}[t]
+\label{table:top}
+\begin{center}
+\begin{tabular}{l  r r c  r r c }
+  & \multicolumn{3}{c}{2015} & \multicolumn{3}{c}{2016} \\
+  \multicolumn{1}{c}{Name}
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & trend
+  & \multicolumn{1}{c}{$x$} & \multicolumn{1}{c}{$y$} & trend \\
+  \cmidrule[1.2pt](r){1-1} \cmidrule[1.2pt](lr){2-4} \cmidrule[1.2pt](l){5-7}
+  Amanda  & 11.2 & 13.9 & increasing & 12.1 & 12.1 & none \\
+  Daniel  & 14.5 & 11.4 & decreasing & 19.4 & 13.6 & decreasing \\
+  Homer   &  0.0 &  0.0 & none       &  0.0 &  0.0 & none \\
+\bottomrule[0.2pt]
+\end{tabular}
+\end{center}
+\caption{Table placed at top}
+\end{table}
+
+Duis quam orci, lobortis sollicitudin lacinia in, lobortis a enim. Maecenas interdum auctor pulvinar.
+Ut at mi id orci ultricies porta ultricies eu nulla. Sed tempor leo vel fringilla euismod. Donec gravida velit
+eget tortor pretium malesuada. Pellentesque ut laoreet orci. Quisque feugiat, sapien sed cursus malesuada,
+ante est tristique tellus, ut aliquam mi ligula vel nunc. Aliquam sagittis purus est, ut pretium justo cursus vitae.
+Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
+Maecenas quis leo a metus pharetra tincidunt. Etiam sed lectus vel mi semper vehicula a sed lorem.
+Maecenas elementum sit amet enim et scelerisque.
+Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+Donec viverra, erat finibus interdum sollicitudin, massa enim venenatis ex, ac commodo dolor ipsum at urna.
+Proin hendrerit sem ipsum, vel vestibulum risus fermentum id.
+
+
+
+\begin{figure}[t]
+\label{figure:top}
+\begin{center}
+\begin{tabular}{l l}
+  $A = Z_1^2$			&	$Z_3 = A\cdot C$ \\
+  $B = b\cdot A^2$	&	$X_3 = C^2 + B$\\
+  $C = X_1^2$			&  $Y_3 = (Y_1^2 + a\cdot Z_3 + B)\cdot X_3 + Z_3\cdot B$.
+\end{tabular}
+\end{center}
+\caption{Figure placed at top}
+\end{figure}
+
+\begin{figure}[t!]
+\begin{center}
+\includegraphics[width=10cm]{logo}
+\caption{Example of image file in \TeX}
+\end{center}
+\end{figure}
+
+Vestibulum ut pulvinar risus. Aliquam erat volutpat. Suspendisse iaculis ultricies neque nec hendrerit.
+Donec vitae elit at urna laoreet facilisis. Vivamus commodo faucibus odio, vitae hendrerit lorem cursus eget.
+Phasellus rhoncus aliquet lacus in bibendum. Morbi eleifend efficitur erat, non semper eros faucibus vel.
+Nam eget cursus risus. Vivamus ut rutrum urna. Integer ac convallis felis.
+Pellentesque lobortis maximus neque sit amet mattis.
+
+
+Quisque \hspace{5cm} sed mollis nisl. Vestibulum ex ligula, finibus non libero et, iaculis convallis nisi.
+Integer vel erat sed erat ultrices ultrices sit amet sed leo. Morbi massa ex, maximus id lectus vitae,
+hendrerit aliquam ante. Fusce feugiat eros sapien, sed convallis sapien egestas nec. Etiam aliquet at
+nisi vitae feugiat. Proin convallis tempus nunc ac dapibus. Nulla consequat eget odio id bibendum.
+
+
+
+\pagebreak
+\section*{Bibliography}
+
+Examples of natbib reference styles:
+\begin{itemize}
+  \item using \textbackslash citet\{AdikariImbert\}: \citet{AdikariImbert}
+  \item using \textbackslash citet*\{AdikariImbert\}: \citet*{AdikariImbert}
+  \item using \textbackslash citep\{AdikariImbert\}: \citep{AdikariImbert}
+  \item using \textbackslash citep\{AdikariImbert,Yao76\}: \citep{AdikariImbert,Yao76}
+  \item using \textbackslash citep[see also][chapter 2]\{Yao76\}: \citep[see also][chapter 2]{Yao76}
+\end{itemize}
+
+\bibliographystyle{plain}{}
+\bibliography{references.bib}
+
+
+% uncomment this for olde-style bibliography
+\begin{comment}
+The simplest approach for bibliography is to add a bibliography environment and manually enter
+the references one by one. Document can then be cited like so \cite{KLMMSS}] and \cite{Mort}.
+
+\begin{thebibliography}{9999}
+\bibitem{KLMMSS}
+ S. V.~Konyagin, F. Luca, B. Mans, L.  Mathieson, M.~Sha and I. E. Shparlinski,
+ `Functional graphs of polynomials over finite fields',
+{\it J. Combin. Theory, Ser. B\/}, {\bf 116} ( 2016), 87--122.
+\bibitem{Mort}
+P. Morton, `On certain algebraic curves related to polynomial maps',
+{\it Compositio Math.\/}, {\bf 103}(1996), 319--350;
+Corrigendum,  {\it Compositio Math.\/}, {\bf  147} (2011), 332--334.
+\bibitem{Silv}
+J. H. Silverman, {\it The arithmetic of dynamical systems},
+Springer Verlag, 2007.
+\end{thebibliography}
+\end{comment}
+
+\end{document}
